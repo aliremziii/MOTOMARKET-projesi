@@ -1,8 +1,7 @@
-from distutils.archive_util import make_tarball
 from os import remove
 from site import removeduppaths #site adındaki modüle değişken ekledim
 import time #zaman kütüphanesi zaman değişkeni eklemek için kullanılıyor,
-import colorama
+import colorama #renk kütüphanesi 
 from colorama import Fore, Back, Style
 colorama.init()
 print("KULLANICI GİRİŞ EKRANI")
