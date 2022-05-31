@@ -1,5 +1,3 @@
-from os import remove
-from site import removeduppaths #site adındaki modüle değişken ekledim
 import time #zaman kütüphanesi zaman değişkeni eklemek için kullanılıyor,
 import colorama #renk kütüphanesi 
 from colorama import Fore, Back, Style
