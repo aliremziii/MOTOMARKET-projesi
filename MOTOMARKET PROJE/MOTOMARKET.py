@@ -14,7 +14,7 @@ elif len(eaa_password) > 8 or len(eaa_password) < 3:
 
 else:
     print("Yeni parolanız", eaa_password)
-eaa_username = "emrealiali"
+eaa_username = "emrealiali"#burda eaa_username ye kullanıcı adını belirleyeceğimiz değişkeni eşitliyorum
 while True:
     kullanici_adi = input("Kullanıcı Adını Giriniziz ipucu (emrealiali): ")#kullanıcı adı tanımlamak
     sifre = input("Belirlediğiniz Şifre'yi Giriniz: ")#şifre tanımlamak 
