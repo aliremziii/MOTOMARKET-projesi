@@ -1,23 +1,39 @@
+#YUSUF EMRE CİHAN -----------------------------------------------------------------------------------------------------------------------
 import time #zaman kütüphanesi zaman değişkeni eklemek için kullanılıyor,
-import colorama #renk kütüphanesi 
-from colorama import Fore, Back, Style
-colorama.init()
-print("KULLANICI GİRİŞ EKRANI")
-
-eaa_password = input ("Bir parola belirleyin:")
-
-if not eaa_password:
-    print("Parola bölümü boş geçilemez")
-
-elif len(eaa_password) > 8 or len(eaa_password) < 3:
-    print("parola 8 karakterden uzun 3 karakterden kısa olmamalı")
-
-else:
-    print("Yeni parolanız", eaa_password)
-eaa_username = "emrealiali"#burda eaa_username ye kullanıcı adını belirleyeceğimiz değişkeni eşitliyorum
+print("""
+███    ███  ██████  ████████  ██████  ███    ███  █████  ██████  ██   ██ ███████ ████████ 
+████  ████ ██    ██    ██    ██    ██ ████  ████ ██   ██ ██   ██ ██  ██  ██         ██    
+██ ████ ██ ██    ██    ██    ██    ██ ██ ████ ██ ███████ ██████  █████   █████      ██    
+██  ██  ██ ██    ██    ██    ██    ██ ██  ██  ██ ██   ██ ██   ██ ██  ██  ██         ██    
+██      ██  ██████     ██     ██████  ██      ██ ██   ██ ██   ██ ██   ██ ███████    ██    
+                                                                                          
+                                                                                          
+""")
+print("""
+_  _ _  _ _    _    ____ _  _ _ ____ _    ____ _ ____ _ ____    ____ _  _ ____ ____ _  _ _ 
+|_/  |  | |    |    |__| |\ | | |    |    | __ | |__/ | [__     |___ |_/  |__/ |__| |\ | | 
+| \_ |__| |___ |___ |  | | \| | |___ |    |__] | |  \ | ___]    |___ | \_ |  \ |  | | \| | 
+                                                                                           
+""")
 while True:
-    kullanici_adi = input("Kullanıcı Adını Giriniziz ipucu (emrealiali): ")#kullanıcı adı tanımlamak
+    eaa_password = input ("Bir Parola Belirleyin:")
+
+    if not eaa_password:
+        print("Parola bölümü boş geçilemez")
+
+    elif len(eaa_password) > 8 or len(eaa_password) < 3:
+
+        print("Parola 8 Karakterden Uzun 3 Karakterden Kısa Olmamalı")
+    
+    else:
+     print("Yeni parolanız", eaa_password)
+     break
+ 
+eaa_username = "motomarket"
+while True:
+    kullanici_adi = input("Kullanıcı Adını Giriniz (motomarket): ")#kullanıcı adı tanımlamak
     sifre = input("Belirlediğiniz Şifre'yi Giriniz: ")#şifre tanımlamak 
+    
 
     if (kullanici_adi == eaa_username) and (sifre != eaa_password):#kullanıcı adı doğru fakat şifre yanlış
          print("Şifre yanlış..")
@@ -29,25 +45,20 @@ while True:
          print("Kullanıcı adı ve şifre yanlış..")
 
     if(kullanici_adi == eaa_username) and (sifre == eaa_password):#her ikiside doğru ise sayfayı devam ettiriyor
-        print(Fore.RED)
         print("3") 
-        time.sleep(1) #time kütüphanesini genel olarak kullandığımız yer
-        print(Fore.YELLOW)# colorama kütüphanesi ile renk veriyoruz 
+        time.sleep(1) #time kütüphanesini genel olarak kullandığımız yer 
         print("2") 
         time.sleep(1) 
-        print(Fore.GREEN)
         print("1")
-        time.sleep(1)
-        print(Style.RESET_ALL)#verdiğimiz renkleri sıfırlıyoruz
-        print("Mağazaya Giriş yapıldı!")
+        time.sleep(1)#verdiğimiz renkleri sıfırlıyoruz
+        print("Mağazaya Giriş Yapıldı!")
         time.sleep(0.5)
-        print(Fore.LIGHTWHITE_EX)
         print("HOŞGELDİNİZ!")
         break #komut kendini tekrar etmesin diye komut çizgisini kırıyorum
 
 
-    
-print(Fore.LIGHTCYAN_EX+""" Marka seçiniz
+    #ALİ REMZİ YILDIRIM----------------------------------------------------------------------------------------------------------------------
+print(""" Marka seçiniz
     1.Bajaj
     2.Bmw
     3.Mondial
@@ -58,9 +69,8 @@ print(Fore.LIGHTCYAN_EX+""" Marka seçiniz
     8.Kawasaki
     9.Suzuki
     10.Yamaha
-    PROGRAMI KAPATMAK İÇİN (kapat) YAZINIZ
+    PROGRAMI KAPATMAK İÇİN (0) YAZINIZ
     """)
-print(Style.RESET_ALL)
 # Bu alttaki aşamada motorların her birini değişken olarak tanımlıyorum özelliklerini ona göre giriyorum.
 bajaj = 'Model: Pulsar rs 200\nTipi: Super Sport\n Yılı:2021\n Motor Hacmi: 200 cm³/n Motorgücü 176 - 200hp \n Renk: Mavi \n Fiyat: 57.000TL '
 
@@ -80,61 +90,80 @@ kawasaki = 'Model: Ninja 636 \n Tipi: Super Sport \n Yılı:2005 \n Motor Hacmi:
 
 suzuki = 'Model: GSX-R 250 \n Tipi: Super Sport \n Yılı: 2017 \n Motor Hacmi: 151 - 250 cm3\n Motor Gücü: 250 hp \n Renk: Mavi \n Fiyat: 107.000TL'
 
-yamaha = 'Model: MT-09 \n Tipi: Naked / Roadster \n Yılı: 2015 \n Motor Hacmi:651 - 1000 cm3\n Motor Gücü: 125 hp \n Renk: Turuncu \n Fiyat: 187.000Tl'    
-
+yamaha = 'Model: MT-09 \n Tipi: Naked / Roadster \n Yılı: 2015 \n Motor Hacmi:651 - 1000 cm3\n Motor Gücü: 125 hp \n Renk: Turuncu \n Fiyat: 187.000TL'
+    
 
 #Bu aşamada ise o belirlediğim değişkenleri inputtaki soruya bağlı olarak print ile terminale yazdırıyoruz
 while True:
-    belirle = input("Seçeceğiniz Markanın Adını Giriniz:")
-    if belirle == 'bajaj':
+#Bu kısımda ise belirlediğim markalara sayılar ekledim ve o sayıları terminale girdiğimizde yukarıdaki modelleri terminale yazdırıyoruz
+    belirle = int(input("Seçeceğiniz Markanın Rakamını Giriniz:"))
+    if belirle == 1:
         print(bajaj)
     
-    elif belirle == 'bmw':
+    elif belirle == 2:
         print (bmw)
 
-    elif belirle == 'mondial':
+    elif belirle == 3:
         print(mondial)
 
-    elif belirle == 'ktm':
+    elif belirle == 4:
         print(ktm)
 
-    elif belirle == 'ducati':
+    elif belirle == 5:
         print(ducati)
 
-    elif belirle == 'falcon':
+    elif belirle == 6:
         print(falcon)
 
-    elif belirle == 'honda':
+    elif belirle == 7:
         print(honda)
 
-    elif belirle == 'kawasaki':
+    elif belirle == 8:
         print(kawasaki)
 
-    elif belirle == 'suzuki':
+    elif belirle == 9:
         print(suzuki)
 
-    elif belirle == 'yamaha':
+    elif belirle == 10:
         print(yamaha)
-    
-    elif belirle == 'kapat':
-        
-        print("PROGRAM KAPANIYOR") 
-        print(Fore.RED)
-        time.sleep(1)
-        print(3)
-        time.sleep(1)
-        print(2)
-        time.sleep(1)
-        print(1)
-        time.sleep(1)
-        print(Style.RESET_ALL)
-        print(Fore.LIGHTGREEN_EX)
-        print("Bizi Tercih Ettiğiniz İçin Teşekkür Ederiz :)")
-        time.sleep(2)
-        exit(0)
-   
-    else:
-        print(Fore.LIGHTRED_EX)
-        print("Lütfen Geçerli Bir İşlem Girin")
-        print(Style.RESET_ALL)
+    #AYDIN ALİ KAYGUSUZ-----------------------------------------------------------------------------------------------------------------------
+    elif belirle == 0:
+     print("PROGRAM KAPANIYOR") 
+     time.sleep(1)
+     print(3)
+     time.sleep(1)
+     print(2)
+     time.sleep(1)
+     print(1)
+     time.sleep(1)
+     print("Bizi Tercih Ettiğiniz İçin Teşekkür Ederiz :)")
+     print("""
+                           ______     
+                          /~   ~/
+                         |_      |
+                         |/     __-__
+                          \   /~     ~~-_
+                           ~~ -~~\       ~ |
+                            /     |         \~
+               ,           /     /           \~
+             //   _ _---~~~    //-_           \~
+           /  (/~~ )    _____/-__  ~-_       _-\             _________
+         /  _-~\\0) ~~~~         ~~-_ \__--~~   `\  ___---~~~        /'
+        /_-~                       _-/'          )~/               /'
+        (___________/           _-~/'         _-~~/             _-~
+     _ ----- _~-_\\\\        _-~ /'      __--~   (_ ______---~~~--_
+  _-~         ~-_~\\\\      (   (     -_~          ~-_  |          ~-_
+ /~~~~\          \ \~~       ~-_ ~-_    ~\            ~~--__-----_    \~
+;    / \ ______-----\           ~-__~-~~~~~~--_             ~~--_ \    .
+|   | \((*)~~~~~~~~~~|      __--~~             ~-_               ) |   |
+|    \  |~|~---------)__--~~                      \_____________/ /    ,
+ \    ~-----~    /  /~                             )  \    ~-----~    /
+  ~-_         _-~ /                                    `-_         _-~
+     ~ ----- ~                                            ~ ----- ~  
+     """)
+     time.sleep(2)
      
+     exit(0)
+   
+    elif int != belirle: #burda ise elif yaparak geçersiz olarak girilecek işlemleri ekrana yansıtıyoruz
+        print("Lütfen Geçerli Bir İşlem Girin")
